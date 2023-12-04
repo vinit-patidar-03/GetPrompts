@@ -6,10 +6,12 @@ import Profile from '@components/Profile';
 const UserProfile = () => {
 
     const { id } = useParams();
-    const [user, setUser] = useState(null);
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
+        if(!session?.user){
+            router.push('/');
+        }
         fetchPosts();
     }, [])
 
