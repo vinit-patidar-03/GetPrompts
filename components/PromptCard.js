@@ -19,6 +19,11 @@ const Promptcard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
     }
 
     const goToUserProfile = (id)=>{
+        
+        if(!session?.user.id){
+            return;
+        }
+
         if(id === session?.user.id){
             router.push(`/profile`)
         }

@@ -4,7 +4,10 @@ import '@styles/globals.css';
 
 export const metadata = {
     title: "GetPrompts",
-    description: "Discover and Share AI Prompts"
+    description: "Discover and Share AI Prompts",
+    icons: {
+        icon : "/assets/images/logo.svg"
+    }
 }
 
 const Layout = ({ children }) => {
